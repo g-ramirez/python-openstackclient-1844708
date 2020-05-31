@@ -1,0 +1,509 @@
+python-openstackclient (5.2.0-0ubuntu1~cloud0) bionic-ussuri; urgency=medium
+
+  * New upstream release for the Ubuntu Cloud Archive.
+
+ -- Openstack Ubuntu Testing Bot <openstack-testing-bot@ubuntu.com>  Mon, 30 Mar 2020 15:39:24 +0000
+
+python-openstackclient (5.2.0-0ubuntu1) focal; urgency=medium
+
+  * New upstream release for OpenStack Ussuri.
+  * d/control: Align (Build-)Depends with upstream.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 30 Mar 2020 15:59:21 +0100
+
+python-openstackclient (4.0.0-0ubuntu2) focal; urgency=medium
+
+  * d/control: Drop python3-keyring as it is no longer used (LP: #1861268).
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Tue, 04 Feb 2020 13:28:26 -0500
+
+python-openstackclient (4.0.0-0ubuntu1) eoan; urgency=medium
+
+  * New upstream release for OpenStack Train.
+  * d/control: Align (Build-)Depends with upstream.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 25 Sep 2019 14:23:09 -0400
+
+python-openstackclient (3.19.0-0ubuntu2) eoan; urgency=medium
+
+  * d/tests/control: Drop Python 2 autopkgtest now that we no longer
+    have a Python 2 binary package.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Tue, 17 Sep 2019 15:43:12 +0200
+
+python-openstackclient (3.19.0-0ubuntu1) eoan; urgency=medium
+
+  * New upstream release for OpenStack Train.
+  * d/control: Align (Build-)Depends with upstream.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Tue, 30 Jul 2019 15:33:27 -0400
+
+python-openstackclient (3.18.0-0ubuntu2) eoan; urgency=medium
+
+  * d/control: Drop BDI's on python-* packages.
+  * d/control: Drop python-openstackclient binary package.
+  * d/*.postinst,prerm,postrm: Drop, alternatives no longer needed.
+  * d/rules: Tweak to stop build and install of Python 2 parts.
+
+ -- Sahid Orentino Ferdjaoui <sahid.ferdjaoui@canonical.com>  Mon, 15 Jul 2019 10:03:02 +0100
+
+python-openstackclient (3.18.0-0ubuntu1) disco; urgency=medium
+
+  * New upstream release for OpenStack Stein.
+  * d/control: Align (Build-)Depends with upstream.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Mon, 11 Mar 2019 16:37:25 -0400
+
+python-openstackclient (3.17.0-0ubuntu1) disco; urgency=medium
+
+  * New upstream release for OpenStack Stein.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/drop-sphinxcontrib-apidoc.patch: Droped. No longer needed.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 30 Jan 2019 10:15:56 -0500
+
+python-openstackclient (3.16.1-0ubuntu1) cosmic; urgency=medium
+
+  * New stable point release for OpenStack Rocky.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 04 Oct 2018 12:33:47 -0400
+
+python-openstackclient (3.16.0-0ubuntu1) cosmic; urgency=medium
+
+  * New upstream release for OpenStack Rocky.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/drop-sphinxcontrib-apidoc.patch: Drop sphinxcontrib.apidoc extension
+    until package is available.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 01 Aug 2018 15:27:19 -0400
+
+python-openstackclient (3.15.0-0ubuntu2) cosmic; urgency=medium
+
+  * d/tests/*: Switch to our standard client dep8 tests instead of using
+    openstack-deploy.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 20 Jun 2018 08:49:23 -0400
+
+python-openstackclient (3.15.0-0ubuntu1) cosmic; urgency=low
+
+  * Merge from Debian unstable.  Remaining changes:
+    - d/gbp.conf: Retain for gbp and pristine-tar config.
+    - d/control: Enable autopkgtest-pkg-python testsuite.
+    - d/watch: Get tarball from tarballs.openstack.org.
+  * New upstream release.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/fix-output-encoding.patch: Dropped. Fixed in upstream release.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Tue, 12 Jun 2018 11:16:58 -0400
+
+python-openstackclient (3.14.2-1) unstable; urgency=medium
+
+  [ Michal Arbet ]
+  * New upstream version
+  * Add bash completion for openstackclient
+  * Edit d/control to use openstack-pkg-tools >= 71
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 05 Jun 2018 17:47:44 +0200
+
+python-openstackclient (3.14.0-6) unstable; urgency=medium
+
+  * Update "openstack log show" encoding patch after merge upstream.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 25 Mar 2018 00:26:32 +0100
+
+python-openstackclient (3.14.0-5) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Remove Testsuite field, not needed anymore
+
+  [ Thomas Goirand ]
+  * Fixed Python 3 shebang.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 18 Mar 2018 18:33:32 +0000
+
+python-openstackclient (3.14.0-4) unstable; urgency=medium
+
+  * Python 3 has now priority over Python 2.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 11 Mar 2018 13:15:25 +0100
+
+python-openstackclient (3.14.0-3) unstable; urgency=medium
+
+  * Make python-zunclient in the <!nodoc> pool.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 26 Feb 2018 22:22:29 +0000
+
+python-openstackclient (3.14.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 25 Feb 2018 21:55:15 +0000
+
+python-openstackclient (3.14.0-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Standards-Version is now 4.1.3.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 13 Feb 2018 22:51:34 +0000
+
+python-openstackclient (3.14.0-0ubuntu1) bionic; urgency=medium
+
+  * New upstream release.
+  * d/control: Align (Build-)Depends with upstream.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Mon, 12 Feb 2018 09:30:43 -0500
+
+python-openstackclient (3.13.0-0ubuntu1) bionic; urgency=medium
+
+  * New upstream release.
+  * d/*: wrap-and-sort -bast.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/control: Update Standards-Version to 4.1.2.
+  * d/control: Bump debhelper compat to 10.
+  * d/p/drop-openstackdoctheme.patch: Dropped. No longer needed.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 25 Jan 2018 08:20:51 -0500
+
+python-openstackclient (3.12.0-3) unstable; urgency=medium
+
+  * Add patch to fix output encoding that simply crashes the client.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 07 Feb 2018 09:31:36 +0100
+
+python-openstackclient (3.12.0-2) unstable; urgency=medium
+
+  * Uploading to unstable:
+    - Fix FTBFS with Python 3.6 (Closes: #867508).
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 29 Oct 2017 17:47:25 +0100
+
+python-openstackclient (3.12.0-1) experimental; urgency=medium
+
+  [ Daniel Baumann ]
+  * Updating vcs fields.
+  * Updating copyright format url.
+  * Running wrap-and-sort -bast.
+  * Updating maintainer field.
+  * Updating standards version to 4.0.0.
+  * Removing gbp.conf, not used anymore or should be specified in the
+    developers dotfiles.
+  * Correcting permissions in debian packaging files.
+  * Updating standards version to 4.0.1.
+  * Updating standards version to 4.1.0.
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Using pkgos-dh_auto_{test,install}.
+  * Fixed (build-)depends for this release.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 03 Oct 2017 14:36:21 +0200
+
+python-openstackclient (3.12.0-0ubuntu2) artful; urgency=medium
+
+  * d/control: Set min python-requests to 2.14.2.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 03 Aug 2017 16:19:00 -0400
+
+python-openstackclient (3.12.0-0ubuntu1) artful; urgency=medium
+
+  * New upstream release.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/drop-openstackdoctheme.patch: Temporarily drop openstackdocstheme
+    sphinx extension until sphinx>=1.6.2 is available.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 02 Aug 2017 19:54:13 -0400
+
+python-openstackclient (3.11.0-0ubuntu1) artful; urgency=medium
+
+  * d/watch: Use tarballs.openstack.org.
+  * New upstream release for OpenStack Pike.
+  * Align (Build-)Depends with upstream release.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 15 May 2017 18:42:30 +0100
+
+python-openstackclient (3.9.0-0ubuntu1) artful; urgency=medium
+
+  [ Chuck Short ]
+  * New upstream release.
+
+ -- James Page <james.page@ubuntu.com>  Fri, 21 Apr 2017 10:01:48 +0100
+
+python-openstackclient (3.8.1-0ubuntu3) zesty; urgency=medium
+
+  * debian/control: Dropped python3-hacking. 
+
+ -- Chuck Short <zulcss@ubuntu.com>  Sat, 04 Feb 2017 17:42:44 -0500
+
+python-openstackclient (3.8.1-0ubuntu2) zesty; urgency=medium
+
+  * debian/control: Dropped python-hacking. 
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 03 Feb 2017 21:49:07 -0500
+
+python-openstackclient (3.8.1-0ubuntu1) zesty; urgency=medium
+
+  * New upstream release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Tue, 31 Jan 2017 09:38:38 -0500
+
+python-openstackclient (3.8.0-0ubuntu1) zesty; urgency=medium
+
+  * New upstream release. 
+  * d/control: Align (Build-)Depends with upstream.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Mon, 30 Jan 2017 13:31:03 -0500
+
+python-openstackclient (3.7.0-0ubuntu1) zesty; urgency=medium
+
+  * New upstream version.
+  * d/control: Align (Build-)Depends with upstream.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Tue, 17 Jan 2017 09:03:28 -0500
+
+python-openstackclient (3.6.0-0ubuntu1) zesty; urgency=medium
+
+  * New upstream release.
+  * d/control: Align (Build-)Depends with upstream.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Mon, 09 Jan 2017 09:28:05 -0500
+
+python-openstackclient (3.5.0-0ubuntu1) zesty; urgency=medium
+
+  * New upstream release.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/max-images.patch: Dropped. Fixed in upstream release.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Fri, 16 Dec 2016 11:45:52 -0500
+
+python-openstackclient (3.4.1-0ubuntu2) zesty; urgency=medium
+
+  * debian/patches/max-images.patch: Allow more than maximum of 25 images to 
+    be listed. (LP: #1443089) 
+
+ -- Chuck Short <zulcss@ubuntu.com>  Mon, 12 Dec 2016 08:33:47 -0500
+
+python-openstackclient (3.4.1-0ubuntu1) zesty; urgency=medium
+
+  * New upstream version.
+  * debian/control: Bump version dependencies.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Mon, 21 Nov 2016 13:49:29 -0500
+
+python-openstackclient (3.3.0-1ubuntu1) zesty; urgency=medium
+
+  [ Corey Bryant ]
+  * d/gbp.conf: Update gbp configuration file.
+  * d/control: Update Vcs-* links and maintainers.
+
+  [ Chuck Short ]
+  * New upstream version.
+  * debian/control: Bump version dependencies.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 27 Oct 2016 11:40:04 -0400
+
+python-openstackclient (3.2.0-0ubuntu2) yakkety; urgency=medium
+
+  * Reduce scope of autopkgtests to drop requirement on openstack-deploy,
+    which is Debian only.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 05 Sep 2016 11:15:15 +0100
+
+python-openstackclient (3.2.0-0ubuntu1) yakkety; urgency=medium
+
+  [ gustavo panizzo ]
+  * Add autopkgtest tests
+
+  [ Corey Bryant ]
+  * New usptream release.
+  * Align (Build-)Depends with upstream.
+  * d/p/0001-reproducible-build.patch: Dropped. Fixed upstream.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Fri, 02 Sep 2016 11:51:10 -0400
+
+python-openstackclient (2.6.0-1) experimental; urgency=medium
+
+  [ Corey Bryant ]
+  * New upstream release.
+  * Align (Build-)Depends with upstream.
+
+  [ Thomas Goirand ]
+  * Make build reproducible applying Lamby's patch (Closes: #826676).
+  * Unblacklist tests (they all work now...).
+  * Switch to using pkgos-dh_auto_{test,install}.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 11 Jul 2016 14:58:15 +0200
+
+python-openstackclient (2.5.0-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * Standards-Version is 3.9.8 now (no change)
+  * d/rules: Removed UPSTREAM_GIT with default value
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 06 Jun 2016 08:06:59 +0000
+
+python-openstackclient (2.3.0-4) unstable; urgency=medium
+
+  * Add Testsuite field to debian/control
+
+ -- gustavo panizzo <gfa@zumbi.com.ar>  Wed, 20 Jul 2016 14:17:10 +0800
+
+python-openstackclient (2.3.0-3) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Standards-Version is 3.9.8 now (no change)
+  * d/rules: Removed UPSTREAM_GIT with default value
+
+  [ gustavo panizzo ]
+  * Add autopkgtest tests
+
+ -- gustavo panizzo <gfa@zumbi.com.ar>  Tue, 19 Jul 2016 19:28:31 +0800
+
+python-openstackclient (2.3.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 04 Apr 2016 11:30:04 +0000
+
+python-openstackclient (2.3.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 02 Apr 2016 15:21:43 +0200
+
+python-openstackclient (2.2.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 14 Mar 2016 15:01:59 +0100
+
+python-openstackclient (2.1.0-1) experimental; urgency=medium
+
+  [ Corey Bryant ]
+  * New upstream release.
+  * Align (Build-)Depends with upstream.
+
+  [ Thomas Goirand ]
+  * Standards-Version: 3.9.7 (no change).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 03 Mar 2016 04:19:43 +0000
+
+python-openstackclient (2.0.0-3) experimental; urgency=medium
+
+  * Blacklist 3 failed unit tests in Jessie (works in Sid):
+    - test_shell.TestShellCli.test_shell_args_precedence
+    - test_shell.TestShellCliEnv.test_shell_args_precedence_1
+    - test_shell.TestShellCliEnv.test_shell_args_precedence_2
+  * Drop python-tuskarclient from build-depends (project is stopped).
+  * Add Breaks+Replaces: python-openstackclient (<< 2.0.0-2~) in
+    python-openstackclient-doc (Closes: #812452).
+  * VCS URLs using HTTPS.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 06 Feb 2016 08:46:49 +0000
+
+python-openstackclient (2.0.0-2) experimental; urgency=medium
+
+  * Added Python 3 support.
+  * Fixed debian/copyright as per FTP masters recommendation.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 14 Jan 2016 06:13:06 +0000
+
+python-openstackclient (2.0.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 14 Jan 2016 05:30:14 +0000
+
+python-openstackclient (1.7.1-1) unstable; urgency=medium
+
+  [ Corey Bryant ]
+  * New upstream release.
+
+  [ Thomas Goirand ]
+  * Uploading to unstable.
+  * Fixed watch file to use github tag.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 15 Oct 2015 22:27:37 +0000
+
+python-openstackclient (1.7.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 26 Sep 2015 19:37:25 +0000
+
+python-openstackclient (1.6.0-1) experimental; urgency=medium
+
+  [ gustavo panizzo ]
+  * New upstream release.
+
+  [ Thomas Goirand ]
+  * Fixed (build-)depends for this release.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 05 Sep 2015 14:13:01 +0000
+
+python-openstackclient (1.5.0-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+    - d/control: Align requirements with upstream.
+    - d/gbp.conf: Update gbp configuration for liberty branch.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Mon, 22 Jun 2015 16:07:31 +0100
+
+python-openstackclient (1.0.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+  * Removed useless patches.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 27 Apr 2015 21:59:26 +0000
+
+python-openstackclient (1.0.2-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- gustavo panizzo <gfa@zumbi.com.ar>  Tue, 27 Jan 2015 13:50:06 +0800
+
+python-openstackclient (1.0.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Updated Standard version, no changes needed.
+
+ -- gustavo panizzo <gfa@zumbi.com.ar>  Wed, 17 Dec 2014 12:56:18 +0800
+
+python-openstackclient (0.4.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- gustavo panizzo <gfa@zumbi.com.ar>  Fri, 12 Sep 2014 13:52:22 +0800
+
+python-openstackclient (0.4.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- gustavo panizzo <gfa@zumbi.com.ar>  Mon, 30 Jun 2014 00:55:59 -0300
+
+python-openstackclient (0.3.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- gustavo panizzo <gfa@zumbi.com.ar>  Fri, 25 Apr 2014 16:17:10 -0300
+
+python-openstackclient (0.3.0-1) unstable; urgency=low
+
+  * Initial release. (Closes: #733557)
+
+ -- gustavo panizzo <gfa@zumbi.com.ar>  Tue, 31 Dec 2013 01:37:38 -0300
+

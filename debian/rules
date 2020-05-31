@@ -1,0 +1,37 @@
+#!/usr/bin/make -f
+
+include /usr/share/openstack-pkg-tools/pkgos.make
+
+%:
+	dh $@ --with python3,sphinxdoc
+
+override_dh_auto_install:
+	pkgos-dh_auto_install --no-py2
+
+	# Generate bash completion
+	pkgos-gen-completion --py3 openstack
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf doc/build build .testrepository doc/source/api
+
+override_dh_auto_test:
+ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
+	pkgos-dh_auto_test --no-py2 'openstackclient\.tests\.(?!(.*test_shell\.TestShellCli\.test_shell_args_precedence.*|.*test_shell\.TestShellCliEnv\.test_shell_args_precedence_.*))'
+endif
+
+override_dh_sphinxdoc:
+ifeq (,$(findstring nodoc, $(DEB_BUILD_OPTIONS)))
+	sphinx-build -b man doc/source doc/build/man
+	PYTHONPATH=. sphinx-build -b html doc/source $(CURDIR)/debian/python-openstackclient-doc/usr/share/doc/python-openstackclient-doc/html
+	dh_sphinxdoc -O--buildsystem=python3
+endif
+
+override_dh_installman:
+ifeq (,$(findstring nodoc, $(DEB_BUILD_OPTIONS)))
+	sphinx-build -b man doc/source doc/build/man
+	dh_installman
+endif
+
+override_dh_python3:
+	dh_python3 --shebang=/usr/bin/python3
